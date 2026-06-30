@@ -634,8 +634,8 @@ body {
 }
 
 .status.rejected { 
-  background: var(--accent-light-gray-dim); 
-  color: var(--accent-light-gray); 
+  background: var(--accent-cyan-dim); 
+  color: var(--accent-cyan); 
 }
 
 .status.open {

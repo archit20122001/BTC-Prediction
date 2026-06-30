@@ -11,6 +11,14 @@ export default function UserManagement({ onOpenModal, onNavigate }) {
     return true;
   });
 
+  // Helper function to handle copying text
+  const handleCopy = (text, e) => {
+    e.stopPropagation(); // Prevents triggering row clicks if you add them later
+    navigator.clipboard.writeText(text);
+    // Optional: Add your own toast notification here
+    // alert('Copied to clipboard!'); 
+  };
+
   return (
     <div className="page-content">
       <div className="page-header">
@@ -18,7 +26,9 @@ export default function UserManagement({ onOpenModal, onNavigate }) {
           <h1 className="page-title">User Management</h1>
           <p className="page-subtitle">View, suspend, and manage platform users</p>
         </div>
-        <button className="btn btn-outline btn-sm"><i className="fas fa-download" style={{ marginRight: 6 }}></i>Export CSV</button>
+        <button className="btn btn-outline btn-sm">
+          <i className="fas fa-download" style={{ marginRight: 6 }}></i>Export CSV
+        </button>
       </div>
 
       <div className="card">
@@ -27,7 +37,12 @@ export default function UserManagement({ onOpenModal, onNavigate }) {
         </div>
         <div className="card-body" style={{ paddingBottom: 0 }}>
           <div className="filter-bar">
-            <input type="text" placeholder="Search by ID or Telegram..." value={search} onChange={e => setSearch(e.target.value)} />
+            <input
+              type="text"
+              placeholder="Search by ID or Telegram..."
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+            />
             <select value={filter} onChange={e => setFilter(e.target.value)}>
               <option value="all">All Status</option>
               <option value="active">Active</option>
@@ -56,7 +71,27 @@ export default function UserManagement({ onOpenModal, onNavigate }) {
                 <tr key={i}>
                   <td style={{ fontWeight: 600, color: '#f59e0b' }}>{u.id}</td>
                   <td>{u.tgId}</td>
-                  <td><span className="wallet-addr">{u.wallet}</span></td>
+
+                  {/* UPDATED WALLET COLUMN */}
+                  <td>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span className="wallet-addr">{u.wallet}</span>
+                      <button
+                        className="btn-icon"
+                        title="Copy Wallet Address"
+                        onClick={(e) => handleCopy(u.wallet, e)}
+                        style={{
+                          padding: 0,
+                          background: 'transparent',
+                          border: 'none',
+                          display: 'flex',
+                          alignItems: 'center'
+                        }}
+                      >
+                        <i className="fa-slab-press fa-regular fa-copy" style={{ color: '#94a3b8', cursor: 'pointer', fontSize: '0.9em' }}></i>
+                      </button>
+                    </div>
+                  </td>
                   <td style={{ color: '#94a3b8' }}>{u.sponsor}</td>
                   <td>{u.depositBal}</td>
                   <td>{u.profitBal}</td>
@@ -67,7 +102,9 @@ export default function UserManagement({ onOpenModal, onNavigate }) {
                       <button className="btn-icon" title="View Details" onClick={e => { e.stopPropagation(); onNavigate?.('user-detail', u); }}>
                         <i className="fas fa-eye"></i>
                       </button>
-                      <button className="btn-icon" title="Suspend" onClick={e => e.stopPropagation()}><i className="fas fa-ban"></i></button>
+                      <button className="btn-icon" title="Suspend" onClick={e => e.stopPropagation()}>
+                        <i className="fas fa-ban"></i>
+                      </button>
                       <button className="btn-icon" title="View Tree" onClick={e => { e.stopPropagation(); onOpenModal('referral-tree', u); }}>
                         <i className="fas fa-sitemap"></i>
                       </button>
