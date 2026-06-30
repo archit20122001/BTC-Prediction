@@ -98,7 +98,7 @@ export default function PoolDetails({ data, onBack }) {
             <div className="card flex-col" style={{ marginBottom: '20px' }}>
                 <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', paddingBottom: '14px' }}>
                     <span className="card-title" style={{ margin: 0 }}>Participant Allocations</span>
-                    
+
                     {/* Slidable Switch Wrapper for Green/Red Tabs */}
                     <div style={{
                         position: 'relative',
@@ -112,7 +112,7 @@ export default function PoolDetails({ data, onBack }) {
                         boxSizing: 'border-box',
                         userSelect: 'none'
                     }}>
-                        
+
                         {/* Sliding background element dynamically colored */}
                         <div style={{
                             position: 'absolute',
@@ -171,7 +171,7 @@ export default function PoolDetails({ data, onBack }) {
                         </button>
                     </div>
                 </div>
-                
+
                 <div className="table-wrapper">
                     <table className="data-table">
                         <thead>
@@ -197,10 +197,10 @@ export default function PoolDetails({ data, onBack }) {
                                             </td>
                                             <td style={{ textAlign: 'right', paddingRight: '24px' }}>
                                                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '2px' }}>
-                                                    <span style={{ 
-                                                        fontWeight: 700, 
+                                                    <span style={{
+                                                        fontWeight: 700,
                                                         fontSize: '15px',
-                                                        color: isGreenSide ? 'var(--accent-green, #10b981)' : 'var(--accent-red, #ef4444)' 
+                                                        color: isGreenSide ? 'var(--accent-green, #10b981)' : 'var(--accent-red, #ef4444)'
                                                     }}>
                                                         {user.amount}
                                                     </span>
