@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 export default function PoolDetails({ data, onBack }) {
-    // State to track which volume tab is active ('green' or 'red')
     const [activeVolumeTab, setActiveVolumeTab] = useState('green');
 
     if (!data) return <div>Loading...</div>;
@@ -15,7 +14,6 @@ export default function PoolDetails({ data, onBack }) {
     const greenPct = totalVolNum > 0 ? Math.round((greenVolNum / totalVolNum) * 100) : 0;
     const redPct = totalVolNum > 0 ? Math.round((redVolNum / totalVolNum) * 100) : 0;
 
-    // Fallback Mock Deposits - Now including mock wallet addresses
     const userDeposits = data.deposits || [
         { userId: 'USR-2941', wallet: '0x71C...3a29', amount: '$4,200', side: 'up', route: 'Profit Wallet' },
         { userId: 'USR-8812', wallet: '0x88F...9b11', amount: '$1,850', side: 'down', route: 'Personal Wallet' },
@@ -23,7 +21,6 @@ export default function PoolDetails({ data, onBack }) {
         { userId: 'USR-7731', wallet: '0x11B...5d33', amount: '$9,200', side: 'down', route: 'Profit Wallet' },
     ];
 
-    // Filter the deposits based on the active tab
     const displayedDeposits = userDeposits.filter(user => {
         const isGreenSide = user.side.toLowerCase() === 'up' || user.side.toLowerCase() === 'green';
         return activeVolumeTab === 'green' ? isGreenSide : !isGreenSide;
@@ -32,7 +29,6 @@ export default function PoolDetails({ data, onBack }) {
     return (
         <div className="page-content flex-col">
 
-            {/* Standardized Page Header */}
             <div className="page-header">
                 <div>
                     <h1 className="page-title">Pool Details</h1>
@@ -43,7 +39,6 @@ export default function PoolDetails({ data, onBack }) {
                 </button>
             </div>
 
-            {/* Pool Information Card */}
             <div className="card flex-col" style={{ marginBottom: '20px' }}>
                 <div className="card-header" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.05)', paddingBottom: '14px' }}>
                     <span className="card-title" style={{ margin: 0 }}>Pool Information</span>
@@ -60,7 +55,6 @@ export default function PoolDetails({ data, onBack }) {
                 </div>
             </div>
 
-            {/* Volume Breakdown Card */}
             <div className="card flex-col" style={{ marginBottom: '20px' }}>
                 <div className="card-header" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.05)', paddingBottom: '14px' }}>
                     <span className="card-title" style={{ margin: 0 }}>Volume Breakdown</span>
@@ -94,12 +88,10 @@ export default function PoolDetails({ data, onBack }) {
                 </div>
             </div>
 
-            {/* Participant Allocations Card with Tabs */}
             <div className="card flex-col" style={{ marginBottom: '20px' }}>
                 <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', paddingBottom: '14px' }}>
                     <span className="card-title" style={{ margin: 0 }}>Participant Allocations</span>
 
-                    {/* Slidable Switch Wrapper for Green/Red Tabs */}
                     <div style={{
                         position: 'relative',
                         display: 'flex',
@@ -113,7 +105,6 @@ export default function PoolDetails({ data, onBack }) {
                         userSelect: 'none'
                     }}>
 
-                        {/* Sliding background element dynamically colored */}
                         <div style={{
                             position: 'absolute',
                             top: '3px',
@@ -128,7 +119,6 @@ export default function PoolDetails({ data, onBack }) {
                             zIndex: 1
                         }} />
 
-                        {/* Green Vol Button */}
                         <button
                             onClick={() => setActiveVolumeTab('green')}
                             style={{
@@ -149,7 +139,6 @@ export default function PoolDetails({ data, onBack }) {
                             Green Vol
                         </button>
 
-                        {/* Red Vol Button */}
                         <button
                             onClick={() => setActiveVolumeTab('red')}
                             style={{
@@ -177,7 +166,6 @@ export default function PoolDetails({ data, onBack }) {
                         <thead>
                             <tr>
                                 <th style={{ paddingLeft: '24px' }}>User ID</th>
-                                {/* NEW: Wallet Address Header */}
                                 <th>Wallet Address</th>
                                 <th style={{ textAlign: 'right', paddingRight: '24px' }}>Allocation Details</th>
                             </tr>
@@ -191,7 +179,6 @@ export default function PoolDetails({ data, onBack }) {
                                             <td style={{ fontWeight: 600, color: '#f59e0b', paddingLeft: '24px' }}>
                                                 {user.userId}
                                             </td>
-                                            {/* NEW: Wallet Address Data Cell */}
                                             <td style={{ color: '#94a3b8', fontFamily: 'monospace', fontSize: '13px' }}>
                                                 {user.wallet || 'N/A'}
                                             </td>

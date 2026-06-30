@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Dashboard from './pages/Dashboard';
 import UserManagement from './pages/UserManagement';
 import PoolManagement from './pages/PoolManagement';
-import PoolDetails from './pages/PoolDetails'; // Imported PoolDetails
+import PoolDetails from './pages/PoolDetails';
 import RewardPools from './pages/RewardPools';
 import ReferralNetwork from './pages/ReferralNetwork';
 import Settlements from './pages/Settlements';
@@ -33,7 +33,7 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [modal, setModal] = useState({ type: null, data: null });
   const [detailUser, setDetailUser] = useState(null);
-  const [detailPool, setDetailPool] = useState(null); // Managed detail pool state
+  const [detailPool, setDetailPool] = useState(null);
 
   const openModal = (type, data) => setModal({ type, data });
   const closeModal = () => setModal({ type: null, data: null });
@@ -62,7 +62,7 @@ export default function App() {
     switch (activePage) {
       case 'dashboard': return <Dashboard />;
       case 'users': return <UserManagement onOpenModal={openModal} onNavigate={handleNavigate} />;
-      case 'pools': return <PoolManagement onNavigate={handleNavigate} />; // Swapped onOpenModal for onNavigate
+      case 'pools': return <PoolManagement onNavigate={handleNavigate} />;
       case 'rewards': return <RewardPools onOpenModal={openModal} />;
       case 'referrals': return <ReferralNetwork onOpenModal={openModal} />;
       case 'settlements': return <Settlements onOpenModal={openModal} />;
@@ -72,7 +72,7 @@ export default function App() {
       case 'security': return <Security />;
       case 'settings': return <Settings />;
       case 'user-detail': return <UserDetail user={detailUser} />;
-      case 'pool-detail': return <PoolDetails data={detailPool} onBack={() => setActivePage('pools')} />; // Injected Pool Details page component
+      case 'pool-detail': return <PoolDetails data={detailPool} onBack={() => setActivePage('pools')} />;
       default: return <Dashboard />;
     }
   };

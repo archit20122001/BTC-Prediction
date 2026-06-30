@@ -11,12 +11,8 @@ export default function UserManagement({ onOpenModal, onNavigate }) {
     return true;
   });
 
-  // Helper function to handle copying text
   const handleCopy = (text, e) => {
-    e.stopPropagation(); // Prevents triggering row clicks if you add them later
     navigator.clipboard.writeText(text);
-    // Optional: Add your own toast notification here
-    // alert('Copied to clipboard!'); 
   };
 
   return (
@@ -72,7 +68,6 @@ export default function UserManagement({ onOpenModal, onNavigate }) {
                   <td style={{ fontWeight: 600, color: '#f59e0b' }}>{u.id}</td>
                   <td>{u.tgId}</td>
 
-                  {/* UPDATED WALLET COLUMN */}
                   <td>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <span className="wallet-addr">{u.wallet}</span>

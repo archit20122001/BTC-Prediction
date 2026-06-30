@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { poolsData } from '../data/mockData';
 
-export default function PoolManagement({ onNavigate }) { // Swapped onOpenModal for onNavigate prop
+export default function PoolManagement({ onNavigate }) {
   const [filters, setFilters] = useState({
     BTC: { '3 Min': false, '5 Min': false, '4 Hour': false, '1 Day': false, Open: false },
     PAXG: { '3 Min': false, '5 Min': false, '4 Hour': false, '1 Day': false, Open: false },
@@ -215,7 +215,7 @@ export default function PoolManagement({ onNavigate }) { // Swapped onOpenModal 
               {filtered.map((p, i) => (
                 <tr
                   key={i}
-                  onClick={() => onNavigate('pool-detail', p)} // Navigates to full page details view
+                  onClick={() => onNavigate('pool-detail', p)}
                   style={{ cursor: 'pointer' }}
                 >
                   <td style={{ fontWeight: 600, color: '#f59e0b' }}>{p.id}</td>
