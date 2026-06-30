@@ -1,0 +1,1558 @@
+﻿BTC BINARY PREDICTION TRADING 
+PLATFORM 
+ 
+1. EXECUTIVE SUMMARY 
+BTC Binary Prediction Trading Platform is a decentralized peer-to-peer prediction marketplace 
+built as a Telegram Mini App. 
+The platform enables users to predict the direction of Bitcoin (BTCUSD Spot) candles within 
+predefined time periods. 
+Users participate by selecting one of two outcomes: 
+ÔÇó 
+Green Candle (Bullish) 
+ÔÇó 
+Red Candle (Bearish) 
+Users stake USDT into their selected prediction side. 
+After candle completion, the losing side's funds are distributed to the winning side according to 
+predefined platform rules. 
+Unlike traditional exchanges where users trade against the platform, this platform follows a user-
+versus-user prediction model. 
+The platform only facilitates: 
+ÔÇó 
+Pool creation 
+ÔÇó 
+Fund management 
+ÔÇó 
+Settlement calculations 
+ÔÇó 
+Referral distribution 
+ÔÇó 
+Reward pool distribution 
+ÔÇó 
+Audit tracking 
+The platform does not take market exposure risk. 
+ 
+2. PLATFORM VISION 
+To build the world's most transparent and decentralized Bitcoin prediction ecosystem integrated 
+directly inside Telegram. 
+The goal is to create a system where: 
+ÔÇó 
+Every trade is transparent 
+ÔÇó 
+Every distribution is auditable 
+ÔÇó 
+Every reward is traceable 
+ÔÇó 
+Every user can verify platform operations 
+without relying on centralized manipulation. 
+ 
+3. PLATFORM OBJECTIVES 
+The platform has five primary objectives. 
+Objective 1 
+Provide simple BTC directional prediction trading. 
+Objective 2 
+Create a fair user-vs-user reward distribution system. 
+Objective 3 
+Reward community growth through a 20-level referral structure. 
+Objective 4 
+Reward active traders through lifetime reward pools. 
+Objective 5 
+Maintain complete transparency of all transactions. 
+ 
+4. PLATFORM ACCESS 
+The platform operates exclusively through Telegram Mini App. 
+No website version is planned for Version 1. 
+Users access the platform through: 
+Telegram ÔåÆ Mini App ÔåÆ Trading Dashboard 
+Benefits: 
+ÔÇó 
+Faster onboarding 
+ÔÇó 
+Telegram identity verification 
+ÔÇó 
+Referral tracking 
+ÔÇó 
+Mobile-first experience 
+ 
+5. USER REGISTRATION 
+Registration is mandatory. 
+Users cannot access the platform without registration. 
+ 
+Registration Requirements 
+Each user must have: 
+ÔÇó 
+Telegram Account 
+ÔÇó 
+Telegram ID 
+ÔÇó 
+Wallet Address 
+ÔÇó 
+Referral Link 
+ 
+Mandatory Referral System 
+The platform follows a mandatory sponsor model. 
+Registration without a referral link is not allowed. 
+Every user must enter the ecosystem through an existing participant. 
+ 
+User Mapping 
+The system stores: 
+Telegram ID 
+Wallet Address 
+Referral ID 
+Registration Date 
+Sponsor Chain 
+This information creates the permanent referral genealogy. 
+ 
+6. BLOCKCHAIN NETWORK 
+The platform uses: 
+USDT (BEP20) 
+Network: 
+BNB Smart Chain (BSC) 
+All deposits and withdrawals occur in USDT. 
+No other currency is supported in Version 1. 
+ 
+7. WALLET SYSTEM 
+Every user receives two internal wallets. 
+ 
+Deposit Wallet 
+Purpose: 
+Trading capital. 
+Stores: 
+ÔÇó 
+User deposits 
+ÔÇó 
+Deposit balances 
+ÔÇó 
+Trading funds 
+Can be withdrawn without charges. 
+ 
+Profit Wallet 
+Purpose: 
+Stores platform earnings. 
+Includes: 
+ÔÇó 
+Trading profits 
+ÔÇó 
+Referral commissions 
+Profit Wallet withdrawals incur platform charges. 
+ 
+8. FUND FLOW OVERVIEW 
+Deposit Flow: 
+User Wallet 
+ÔåÆ Deposit Wallet 
+Trading Flow: 
+Deposit Wallet 
++ 
+Profit Wallet 
+ÔåÆ Trading Pool 
+Winning Settlement: 
+Trading Pool 
+ÔåÆ Profit Wallet 
+Referral Settlement: 
+Trading Pool 
+ÔåÆ Referral Profit Wallets 
+Platform Allocation: 
+Trading Pool 
+ÔåÆ Platform Wallets 
+ 
+9. TRADING CONCEPT 
+Users predict Bitcoin candle direction. 
+Two choices exist. 
+Green 
+or 
+Red 
+Users stake USDT on their selected side. 
+After candle completion: 
+Correct prediction wins. 
+Incorrect prediction loses. 
+The losing side's funds become reward capital. 
+ 
+10. TRADING POOLS 
+The platform supports four pool types. 
+Pool A 
+3 Minute BTC Candle 
+Pool B 
+5 Minute BTC Candle 
+Pool C 
+4 Hour BTC Candle 
+Pool D 
+1 Day BTC Candle 
+Each pool operates independently. 
+Each pool has a unique Pool ID. 
+Example: 
+POOL-3M-20260616-0001 
+POOL-5M-20260616-0001 
+POOL-4H-20260616-0001 
+POOL-1D-20260616-0001 
+Every transaction is linked to a Pool ID. 
+ 
+11. BTC DATA SOURCE 
+Trading Pair: 
+BTCUSD Spot 
+Source: 
+TradingView Market Feed 
+Settlement uses: 
+Opening Price 
+Closing Price 
+Only. 
+Wicks are ignored. 
+Volume is ignored. 
+Indicators are ignored. 
+ 
+12. CANDLE RESULT RULE 
+Green Candle: 
+Close Price > Open Price 
+Winner = Green Side 
+ 
+Red Candle: 
+Close Price < Open Price 
+Winner = Red Side 
+ 
+No Doji Handling 
+If market closes equal: 
+System automatically follows predefined fallback rule configured by admin. 
+ 
+13. TRADE LIMITS 
+Minimum Trade: 
+$1 
+Maximum Trade: 
+$1,000 
+Per Entry 
+The system rejects any amount outside this range. 
+ 
+14. BALANCE VALIDATION 
+Before accepting a trade: 
+System verifies: 
+Deposit Wallet Balance 
++ 
+Profit Wallet Balance 
+is greater than or equal to Trade Amount. 
+If insufficient: 
+Trade is rejected. 
+No balance deduction occurs. 
+ 
+15. MULTI WALLET PARTICIPATION 
+Users may use both wallets in a single trade. 
+Example: 
+Deposit Wallet = $7 
+Profit Wallet = $3 
+Trade = $10 
+System Uses: 
+$7 Deposit Wallet 
+$3 Profit Wallet 
+Total = $10 
+Both values are stored separately for future settlement. 
+ 
+16. TRADE POOL VISIBILITY 
+Every Trade pool must publicly display: 
+Trade Pool ID 
+Trade Pool Type 
+Entry Countdown 
+Lock Countdown 
+Total Green Volume 
+Total Red Volume 
+Green Participants Count 
+Red Participants Count 
+Total Trade Pool Volume 
+Trade Pool Status 
+This ensures full transparency. 
+ 
+17. PARTICIPANT VISIBILITY 
+Every trade pool must show: 
+User Address 
+Trade Amount 
+Prediction Side 
+Entry Time 
+Pool ID 
+This allows users to verify participation activity. 
+ 
+18. POOL STATES 
+Open 
+Locked 
+Settling 
+Completed 
+Only Open pools accept participation. 
+ 
+19. SETTLEMENT PRINCIPLE 
+The platform never creates rewards. 
+Rewards originate only from: 
+Losing Pool Capital. 
+This guarantees a true P2P model. 
+ 
+20. REWARD DISTRIBUTION MODEL 
+Winning Reward Distribution: 
+User = 70% 
+Referral Network = 20% 
+Platform = 10% 
+This model is applied to every winning reward calculation. 
+ 
+ 
+21. WINNING SIDE IDENTIFICATION 
+Once the BTC candle closes, the platform compares the candle Open Price and Close Price. 
+Green Candle Result 
+Condition: 
+Close Price > Open Price 
+Winner Side = Green 
+Loser Side = Red 
+ 
+Red Candle Result 
+Condition: 
+Close Price < Open Price 
+Winner Side = Red 
+Loser Side = Green 
+ 
+After the winner is identified, the settlement process begins automatically. 
+ 
+22. LOSING POOL FUND COLLECTION 
+The entire losing pool amount becomes the reward source for winning users. 
+Example: 
+Green Pool 
+Total Stake = $1,000 
+Red Pool 
+Total Stake = $100 
+BTC Result = Red 
+Winner Pool = Red 
+Loser Pool = Green 
+Reward Source = $1,000 
+The winning side receives distributions from this $1,000 reward source. 
+ 
+23. USER WINNING SHARE 
+CALCULATION 
+Every winning user receives a percentage of the losing pool based on their contribution inside 
+the winning pool. 
+Formula 
+User Share % 
+= 
+User Stake * Total Winning Pool Stake 
+ 
+Example 
+Winning Pool Total 
+$100 
+User Stake 
+$10 
+Share 
+10 * 100 
+= 10% 
+ 
+24. GROSS WINNING REWARD 
+The user's share percentage is applied to the losing pool. 
+Formula 
+Gross Winning Reward 
+= 
+Losing Pool Amount ├ù User Share % 
+ 
+Example 
+Losing Pool 
+$1,000 
+User Share 
+10% 
+Gross Reward 
+$100 
+This $100 is the reward generated by the user. 
+ 
+25. WINNING REWARD DISTRIBUTION 
+Every gross reward is distributed using the platform settlement model. 
+ 
+Distribution Structure 
+Receiver 
+Percentage 
+User Profit Wallet 
+70% 
+Referral Network 
+20% 
+Platform Profit 
+10% 
+ 
+Example 
+Gross Reward 
+$100 
+Distribution: 
+User Profit Wallet 
+$70 
+Referral Pool 
+$20 
+Platform Share 
+$10 
+ 
+26. BASE CAPITAL RETURN 
+Original trading capital is never treated as profit. 
+When a trade wins, the original capital must be returned. 
+ 
+Example 
+Trade Amount 
+$10 
+Deposit Wallet Contribution 
+$4 
+Profit Wallet Contribution 
+$6 
+Reward Generated 
+$100 
+Settlement: 
+Deposit Wallet Return = $4 
+Profit Wallet Return = $6 
+Reward Credit = $70 
+ 
+Final User Credit 
+Deposit Wallet 
+$4 
+Profit Wallet 
+$76 
+($6 Capital Return + $70 Reward) 
+ 
+27. LOSING TRADE SETTLEMENT 
+If a user loses: 
+Deposit Wallet Capital = Lost 
+Profit Wallet Capital = Lost 
+Reward = $0 
+Capital Return = $0 
+The losing capital becomes part of the reward source for winners. 
+ 
+28. REFERRAL COMMISSION SYSTEM 
+The platform uses a mandatory 20-Level referral structure. 
+Every user must register through a referral link. 
+The referral hierarchy becomes permanent after registration. 
+It cannot be modified later. 
+ 
+29. REFERRAL DISTRIBUTION 
+STRUCTURE 
+20% of every winning reward is allocated to referral commissions. 
+The allocation is divided equally among 20 levels. 
+ 
+Referral Allocation 
+Level Allocation 
+Level 1 
+1% 
+Level Allocation 
+Level 2 
+1% 
+ÔÇªÔÇª 
+ 
+Level 20 
+1% 
+Total 
+20% 
+ 
+30. REFERRAL LEVEL DEFINITIONS 
+Level 1 
+Direct Sponsor 
+Level 2 
+Sponsor of Level 1 
+Level 3 
+Sponsor of Level 2 
+... 
+Level 20 
+20th Upline Sponsor 
+ 
+31. REFERRAL QUALIFICATION MODEL 
+Referral commissions are not automatically earned. 
+Each level must qualify. 
+Qualification is based on: 
+Self-Trading Volume + Direct Referral Trading Volume 
+ 
+Qualification Formula 
+Required Volume 
+= 
+Referral Level ├ù $100 
+ 
+Examples 
+Level 1 
+Required Volume 
+$100 
+ 
+Level 5 
+Required Volume 
+$500 
+ 
+Level 10 
+Required Volume 
+$1,000 
+ 
+Level 20 
+Required Volume 
+$2,000 
+ 
+32. REFERRAL DISTRIBUTION 
+EXAMPLE 
+Winning Reward 
+$100 
+Referral Allocation 
+$20 
+Each Level Receives 
+$1 
+Assume: 
+Level 1 Qualified 
+Level 2 Qualified 
+Level 3 Qualified 
+Level 4 Qualified 
+Level 5 Qualified 
+Level 6ÔÇô20 Not Qualified 
+Distribution 
+Level 1 = $1 
+Level 2 = $1 
+Level 3 = $1 
+Level 4 = $1 
+Level 5 = $1 
+Total Paid = $5 
+Remaining = $15 
+ 
+33. UNQUALIFIED REFERRAL 
+HANDLING 
+Undistributed commissions are never: 
+Held 
+Burned 
+Redistributed 
+Instead: 
+Transferred to Platform Profit Wallet 
+ 
+Example 
+Referral Pool 
+$20 
+Qualified Levels 
+5 
+Paid 
+$5 
+Unqualified 
+$15 
+Platform Receives 
+$15 
+ 
+34. PLATFORM PROFIT MODEL 
+Platform receives: 
+Fixed 10% Settlement Share 
+PLUS 
+All Unqualified Referral Commissions 
+ 
+Example 
+Winning Reward 
+$100 
+Platform Share 
+$10 
+Unqualified Referrals 
+$15 
+Platform Total 
+$25 
+ 
+35. PLATFORM WALLET DISTRIBUTION 
+Instead of sending platform profit to a single treasury wallet and manually distributing it, the 
+platform can use a dedicated Platform Profit Distribution Smart Contract. 
+The smart contract automatically receives the platform's profit allocation and distributes it 
+among all registered Platform Partner Wallets according to predefined rules. 
+ 
+Example 
+Platform Allocation 
+$25 
+Wallet Count 
+5 
+Each Wallet Receives 
+$5 
+ 
+36. REWARD POOL SYSTEM OVERVIEW 
+The platform maintains four lifetime reward pools. 
+These pools are funded by: 
+Profit Wallet Withdrawal Charges 
+Only. 
+ 
+Purpose: 
+Reward long-term traders and community builders. 
+ 
+37. REWARD POOL FUNDING SOURCE 
+Whenever a user withdraws from Profit Wallet: 
+10% Withdrawal Charge 
+is collected. 
+This charge funds the reward ecosystem. 
+ 
+Example 
+Profit Wallet Withdrawal 
+$1,000 
+Charge 
+$100 
+User Receives 
+$900 
+ 
+38. REWARD POOL DISTRIBUTION 
+The collected charge is divided among four reward pools. 
+Pool Allocation 
+Pool 1 
+40% 
+Pool 2 
+30% 
+Pool 3 
+20% 
+Pool 4 
+10% 
+ 
+Example 
+Collected Charge 
+$100 
+Pool 1 
+$40 
+Pool 2 
+$30 
+Pool 3 
+$20 
+Pool 4 
+$10 
+ 
+39. REWARD POOL QUALIFICATION 
+FORMULA 
+Qualification is based on: 
+Self-Trading Volume + Direct Referral Trading Volume 
+ 
+Formula 
+Qualified Volume 
+= 
+Self-Volume + Direct Referral Volume 
+ 
+40. POOL 1 QUALIFICATION 
+Required Total Volume 
+$5,000 
+Benefit 
+User becomes eligible for Pool 1 distributions. 
+ 
+41. POOL 2 QUALIFICATION 
+Required Total Volume  
+$25,000 
+Benefit 
+User becomes eligible for Pool 2 distributions. 
+ 
+42. POOL 3 QUALIFICATION 
+Required Total Volume 
+$50,000 
+Benefit 
+User becomes eligible for Pool 3 distributions. 
+ 
+43. POOL 4 QUALIFICATION 
+Required Total Volume 
+$100,000 
+Benefit 
+User becomes eligible for Pool 4 distributions. 
+ 
+44. LIFETIME QUALIFICATION RULE 
+Qualification is permanent. 
+Once achieved: 
+Never expires 
+Never downgrades 
+Never resets 
+ 
+Example 
+User Qualifies: 
+Pool 1 
+Pool 2 
+Pool 3 
+The user remains active in all three pools forever. 
+ 
+45. MULTIPLE POOL BENEFITS 
+Users can receive rewards from multiple pools simultaneously. 
+Example 
+Qualified: 
+Pool 1 
+Pool 2 
+Pool 3 
+Pool 4 
+User receives distributions from all four pools. 
+ 
+46. REWARD POOL BALANCE 
+ACCUMULATION RULE 
+One of the most important principles of the platform is that Reward Pool funds never expire. 
+Reward Pool balances must always remain inside their respective pools until distributed to 
+qualified users. 
+The platform is not permitted to: 
+ÔÇó 
+Remove pool balances 
+ÔÇó 
+Burn pool balances 
+ÔÇó 
+Transfer pool balances elsewhere 
+ÔÇó 
+Reallocate pool balances to another pool 
+unless explicitly approved through a future governance mechanism. 
+ 
+Example 
+Pool 1 receives: 
+$100 
+Current Qualified Users: 
+0 
+Result: 
+No distribution occurs. 
+No reward mapping occurs. 
+Pool 1 Balance remains: 
+$100 
+The balance remains stored indefinitely. 
+ 
+47. FIRST QUALIFIED USER RULE 
+When a pool contains accumulated funds and no qualified users existed previously, the first 
+qualified user receives the entire accumulated balance. 
+This prevents funds from becoming permanently locked. 
+ 
+Example 
+Pool 1 Balance: 
+$5,000 
+Qualified Users: 
+0 
+A user qualifies for Pool 1. 
+Result: 
+Entire $5,000 is mapped to that user. 
+Pool Balance becomes: 
+$0 
+The user may claim the full amount. 
+ 
+48. FUTURE DISTRIBUTION RULE 
+Once at least one qualified user exists, future distributions are shared equally among all currently 
+qualified users. 
+ 
+Example 
+Pool 1 Qualified Users 
+User A 
+User B 
+User C 
+New Pool Allocation 
+$90 
+Distribution: 
+User A = $30 
+User B = $30 
+User C = $30 
+ 
+49. REWARD MAPPING ENGINE 
+Reward Pools do not directly credit wallets. 
+Instead, every distribution creates a Reward Mapping Record. 
+Reward Mapping ensures: 
+ÔÇó 
+Auditability 
+ÔÇó 
+Transparency 
+ÔÇó 
+Claim tracking 
+ÔÇó 
+Historical reporting 
+ 
+50. REWARD MAPPING RECORD 
+The system creates a record containing: 
+Mapping ID 
+User ID 
+Pool ID 
+Reward Amount 
+Source Withdrawal ID 
+Distribution Date 
+Claim Status 
+Claim Timestamp 
+ 
+Example 
+Mapping ID: 
+RPM-000001 
+Pool: 
+Pool 1 
+Amount: 
+$25 
+Status: 
+Unclaimed 
+ 
+51. CLAIMABLE REWARD BALANCE 
+Users may accumulate multiple reward mappings. 
+The system calculates: 
+Total Claimable Balance 
+= 
+Sum of all Unclaimed Reward Mappings 
+ 
+Example 
+Mapping 1 
+$10 
+Mapping 2 
+$25 
+Mapping 3 
+$15 
+Claimable Balance 
+$50 
+ 
+52. REWARD CLAIM SYSTEM 
+Users can claim reward mappings at any time. 
+The claim process is user initiated. 
+No automatic wallet credit occurs. 
+ 
+53. CLAIM PROCESS 
+Step 1 
+User opens Reward Pool Dashboard 
+Step 2 
+System displays claimable balance 
+Step 3 
+User clicks Claim 
+Step 4 
+System validates mappings 
+Step 5 
+Mappings marked Claimed 
+Step 6 
+Funds transferred 
+Step 7 
+Audit record generated 
+ 
+54. CLAIM DESTINATION 
+Approved Final Rule 
+Reward Pool claims are transferred directly to the user's connected non-custodial wallet. 
+They do NOT pass through: 
+Deposit Wallet 
+Profit Wallet 
+This ensures maximum decentralization. 
+ 
+Example 
+Claim Amount 
+$100 
+Connected Wallet 
+0xABCD1234 
+Result 
+Smart Contract transfers: 
+$100 USDT 
+Directly to wallet 
+ 
+55. CLAIM FEES 
+Reward Pool Claims are completely free. 
+No deductions apply. 
+ 
+No Charges 
+No Admin Fee 
+No Withdrawal Fee 
+No Processing Fee 
+No Platform Fee 
+ 
+Example 
+Claim 
+$100 
+User Receives 
+$100 
+ 
+56. REWARD POOL PRINCIPLES 
+The reward system follows the following principles: 
+1. Funds never expire. 
+2. Funds never burn. 
+3. Funds never leave the assigned pool. 
+4. First qualified user receives accumulated balance. 
+5. Future allocations are equally distributed. 
+6. Claims are free. 
+7. Claims are fully auditable. 
+8. Users may qualify for multiple pools. 
+ 
+57. DEPOSIT SYSTEM 
+The platform accepts: 
+USDT (BEP20) 
+only. 
+No fiat support. 
+No credit card support. 
+No banking support. 
+ 
+58. DEPOSIT FLOW 
+User 
+Ôåô 
+Connect Wallet 
+Ôåô 
+Transfer USDT 
+Ôåô 
+Blockchain Confirmation 
+Ôåô 
+Deposit Wallet Credit 
+Ôåô 
+Trade Ready 
+ 
+59. DEPOSIT VALIDATION 
+System validates: 
+Correct Network 
+Correct Contract 
+Minimum Confirmations 
+Successful Transfer 
+ 
+Only then: 
+Deposit Wallet balance is updated. 
+ 
+60. WITHDRAWAL SYSTEM 
+Two withdrawal types exist. 
+ 
+Deposit Wallet Withdrawal 
+Source: 
+Deposit Wallet 
+Fee: 
+0% 
+Destination: 
+Connected Wallet 
+ 
+Profit Wallet Withdrawal 
+Source: 
+Profit Wallet 
+Fee: 
+10% 
+Destination: 
+Connected Wallet 
+ 
+61. PROFIT WALLET WITHDRAWAL 
+EXAMPLE 
+Withdrawal Request 
+$1,000 
+Charge 
+$100 
+User Receives 
+$900 
+ 
+Reward Pool Funding 
+Pool 1 = $40 
+Pool 2 = $30 
+Pool 3 = $20 
+Pool 4 = $10 
+ 
+62. USER DASHBOARD 
+The dashboard is the primary screen of the Telegram Mini App. 
+Users should immediately understand: 
+Wallet balances 
+Trading activity 
+Referral status 
+Reward status 
+ 
+63. DASHBOARD OVERVIEW SECTION 
+Display: 
+Deposit Wallet Balance 
+Profit Wallet Balance 
+Total Trading Volume 
+Total Deposits 
+Total Withdrawals 
+Total Rewards Earned 
+Total Referral Earnings 
+Total Reward Pool Earnings 
+ 
+64. QUALIFICATION STATUS SECTION 
+Display: 
+Pool 1 Status 
+Pool 2 Status 
+Pool 3 Status 
+Pool 4 Status 
+Required Volume 
+Current Volume 
+Qualification Date 
+ 
+Example 
+Pool 1 
+Qualified 
+$6,200 / $5,000 
+ 
+Pool 2 
+Not Qualified 
+$18,000 / $25,000 
+ 
+65. ACTIVE POOLS SCREEN 
+Display all active pools. 
+Information: 
+Pool ID 
+Pool Type 
+Green Volume 
+Red Volume 
+Green Participants 
+Red Participants 
+Entry Countdown 
+Lock Countdown 
+Current Status 
+ 
+66. TRADE ENTRY SCREEN 
+Quick Amount Buttons 
+$1 
+$5 
+$10 
+$20 
+$50 
+$100 
+$250 
+$500 
+$1000 
+ 
+Custom Amount Option 
+Users may manually enter any value within limits. 
+ 
+Validation: 
+Minimum = $1 
+Maximum = $1000 
+ 
+67. POOL DETAILS SCREEN 
+Each Pool shows: 
+Pool ID 
+Pool Status 
+Start Time 
+Lock Time 
+Close Time 
+Green Volume 
+Red Volume 
+Participants 
+ 
+68. TRANSPARENCY VIEW 
+Users can view: 
+All Green Participants 
+All Red Participants 
+Stake Amount 
+Time Joined 
+Prediction Side 
+This creates trust and transparency. 
+ 
+69. RESULT SCREEN 
+After completion: 
+Pool ID 
+Winner Side 
+Winning Amount 
+Total Volume 
+Settlement Time 
+ 
+70. USER PARTICIPATION HISTORY 
+Display: 
+Pool ID 
+Trade Amount 
+Prediction 
+Result 
+Profit 
+Loss 
+Date 
+Status 
+ 
+71. REFERRAL DASHBOARD 
+Display: 
+Referral Link 
+Referral Count 
+Active Referrals 
+Trading Volume 
+Referral Earnings 
+Level Qualification 
+ 
+72. LEVEL WISE REFERRAL VIEW 
+For each level: 
+Level Number 
+User Count 
+Trading Volume 
+Commission Earned 
+Qualification Status 
+ 
+Example 
+Level 1 
+25 Users 
+$15,000 Volume 
+$350 Earnings 
+Qualified 
+ 
+73. WALLET LEDGER 
+Every transaction must be visible. 
+Display: 
+Date 
+Time 
+Transaction Type 
+Credit 
+Debit 
+Balance 
+Narration 
+Reference Number 
+ 
+Example 
+2026-06-16 
+Trade Reward 
+Credit 
+$70 
+Pool #P1234 
+ 
+74. AUDIT PRINCIPLE 
+Every financial event must be traceable. 
+Nothing can occur without a ledger record. 
+ 
+ 
+75. SYSTEM ARCHITECTURE 
+OVERVIEW 
+The platform is designed as a Telegram-native decentralized prediction ecosystem. 
+The architecture consists of three major layers: 
+Layer 1 ÔÇô Telegram Mini App 
+User Interface Layer 
+Responsible for: 
+ÔÇó 
+User Registration 
+ÔÇó 
+Wallet Connection 
+ÔÇó 
+Pool Participation 
+ÔÇó 
+Trading Activities 
+ÔÇó 
+Referral Management 
+ÔÇó 
+Reward Pool Management 
+ÔÇó 
+Transaction History 
+ 
+Layer 2 ÔÇô Backend Services 
+Business Logic Layer 
+Responsible for: 
+ÔÇó 
+User Authentication 
+ÔÇó 
+Telegram Mapping 
+ÔÇó 
+Pool Management 
+ÔÇó 
+Settlement Calculations 
+ÔÇó 
+Referral Qualification Calculation 
+ÔÇó 
+Reward Pool Qualification Calculation 
+ÔÇó 
+Dashboard Data Processing 
+ÔÇó 
+Reporting 
+ÔÇó 
+Audit Logging 
+ 
+Layer 3 ÔÇô Smart Contract Layer 
+Blockchain Settlement Layer 
+Responsible for: 
+ÔÇó 
+Fund Custody 
+ÔÇó 
+Deposit Verification 
+ÔÇó 
+Settlement Execution 
+ÔÇó 
+Reward Distribution 
+ÔÇó 
+Reward Claim Processing 
+ÔÇó 
+Withdrawal Execution 
+ÔÇó 
+On-chain Auditability 
+ 
+76. DECENTRALIZATION MODEL 
+The project aims for maximum decentralization. 
+Version 1 Architecture: 
+Telegram Mini App 
+ÔÇó 
+ 
+Backend Services 
+ÔÇó 
+ 
+Smart Contracts 
+This hybrid model provides: 
+ÔÇó 
+Better user experience 
+ÔÇó 
+Faster calculations 
+ÔÇó 
+Lower gas consumption 
+ÔÇó 
+Complete financial transparency 
+ 
+77. USER IDENTITY MODEL 
+Each user must have a unique identity record. 
+User Profile contains: 
+Telegram ID 
+Telegram Username 
+Wallet Address 
+Referral Sponsor ID 
+Registration Date 
+Account Status 
+Qualification Status 
+ 
+78. MANDATORY REFERRAL MODEL 
+The platform uses a forced referral architecture. 
+Users cannot self-register. 
+Users must join through: 
+Referral Link 
+or 
+Referral Contract Address for first user only 
+ 
+Registration Process 
+Referral Link Click 
+Ôåô 
+Telegram Authorization 
+Ôåô 
+Wallet Connection 
+Ôåô 
+User Creation 
+Ôåô 
+Referral Tree Assignment 
+Ôåô 
+Dashboard Access 
+ 
+79. REFERRAL TREE PRINCIPLE 
+Referral genealogy becomes permanent. 
+Users cannot: 
+ÔÇó 
+Change Sponsor 
+ÔÇó 
+Transfer Position 
+ÔÇó 
+Reassign Referral Tree 
+after registration. 
+ 
+80. SMART CONTRACT MODULES 
+The platform requires separate smart contracts. 
+ 
+User Registry Contract 
+Stores: 
+User ID 
+Wallet Address 
+Telegram Mapping 
+Referral Structure 
+ 
+Pool Contract 
+Stores: 
+Pool Information 
+Participant Information 
+Pool Status 
+Pool Volumes 
+ 
+Settlement Contract 
+Stores: 
+Winner Calculation 
+Reward Distribution 
+Capital Return 
+Settlement Records 
+ 
+Referral Contract 
+Stores: 
+Referral Tree 
+Qualification Data 
+Commission Records 
+ 
+Reward Pool Contract 
+Stores: 
+Pool Balances 
+Reward Mappings 
+Claim Records 
+Qualification Records 
+ 
+Treasury Contract 
+Stores: 
+Platform Allocation 
+Platform Wallet Distribution 
+Treasury Records 
+ 
+81. SMART CONTRACT EVENTS 
+Every important action generates blockchain events. 
+Examples: 
+UserRegistered 
+PoolCreated 
+TradePlaced 
+PoolLocked 
+PoolSettled 
+RewardDistributed 
+ReferralPaid 
+RewardClaimed 
+WithdrawalExecuted 
+ 
+82. DATABASE DESIGN 
+Although funds remain blockchain verified, off-chain indexing is required. 
+The platform maintains a relational database. 
+ 
+83. USERS TABLE 
+Stores: 
+UserID 
+TelegramID 
+WalletAddress 
+SponsorID 
+RegistrationDate 
+Status 
+ 
+84. WALLET TABLE 
+Stores: 
+WalletID 
+UserID 
+DepositWalletBalance 
+ProfitWalletBalance 
+UpdatedDate 
+ 
+85. TRADE POOL TABLE 
+Stores: 
+PoolID 
+PoolType 
+OpenTime 
+LockTime 
+CloseTime 
+PoolStatus 
+Result 
+TotalVolume 
+ 
+86. PARTICIPATION TABLE 
+Stores: 
+TradeID 
+PoolID 
+UserID 
+PredictionSide 
+Amount 
+DepositWalletContribution 
+ProfitWalletContribution 
+TradeTime 
+ 
+87. SETTLEMENT TABLE 
+Stores: 
+SettlementID 
+PoolID 
+UserID 
+WinningReward 
+ReferralAllocation 
+PlatformAllocation 
+CapitalReturn 
+SettlementDate 
+ 
+88. REFERRAL TABLE 
+Stores: 
+ReferralID 
+UserID 
+Level 
+Volume 
+QualificationStatus 
+CommissionEarned 
+ 
+89. REWARD POOL TABLE 
+Stores: 
+PoolID 
+PoolBalance 
+QualifiedUsers 
+DistributedAmount 
+ClaimedAmount 
+PendingAmount 
+ 
+90. REWARD MAPPING TABLE 
+Stores: 
+MappingID 
+UserID 
+RewardPoolID 
+Amount 
+ClaimStatus 
+ClaimDate 
+ 
+91. WITHDRAWAL TABLE 
+Stores: 
+WithdrawalID 
+UserID 
+WalletType 
+RequestedAmount 
+ChargeAmount 
+NetAmount 
+Status 
+Date 
+ 
+92. AUDIT LOG TABLE 
+Stores: 
+LogID 
+ActionType 
+ReferenceID 
+UserID 
+DateTime 
+Description 
+ 
+93. ADMIN PANEL OVERVIEW 
+The Admin Panel manages ecosystem operations. 
+No admin can manually modify balances. 
+All financial actions must be rule driven. 
+ 
+94. ADMIN DASHBOARD 
+Displays: 
+Total Users 
+Active Users 
+Today's Volume 
+Total Deposits 
+Total Withdrawals 
+Platform Revenue 
+Total Referral Distribution 
+Reward Pool Balances 
+ 
+95. USER MANAGEMENT 
+Admin can: 
+View Users 
+Suspend Users 
+Freeze Accounts 
+View Trading History 
+View Wallet History 
+View Referral Tree 
+ 
+96. POOL MANAGEMENT 
+Admin can: 
+View Pools 
+View Pool Status 
+Monitor Volumes 
+Monitor Settlements 
+Create Emergency Lock 
+ 
+Admin cannot manually alter results. 
+ 
+97. REWARD POOL MANAGEMENT 
+Admin can view: 
+Pool Balances 
+Qualified Users 
+Reward Mapping Records 
+Claim Records 
+Distribution Records 
+ 
+98. REPORTING MODULE 
+Reports: 
+Daily Volume 
+Weekly Volume 
+Monthly Volume 
+Referral Growth 
+Reward Pool Growth 
+Revenue Analysis 
+Settlement Analysis 
+ 
+99. SECURITY FRAMEWORK 
+The platform must implement: 
+Wallet Verification 
+Contract Verification 
+API Authentication 
+Encrypted Communication 
+Audit Logging 
+Rate Limiting 
+Fraud Detection 
+ 
+100. MULTI-ACCOUNT PROTECTION 
+The platform should monitor: 
+Duplicate Wallets 
+Duplicate Telegram Accounts 
+Referral Abuse 
+Wash Trading 
+Circular Volume Generation 
+ 
+Suspicious accounts may be flagged. 
+ 
+101. SETTLEMENT SECURITY 
+Settlement Process must be: 
+Automatic 
+Immutable 
+Auditable 
+Verifiable 
+No manual settlement intervention should be possible. 
+ 
+102. FAILED TRANSACTION HANDLING 
+If blockchain transfer fails: 
+Status = Pending 
+Retry Queue = Created 
+User Balance = Unchanged 
+Audit Log = Generated 
+ 
+103. FAILED WITHDRAWAL HANDLING 
+If withdrawal transaction fails: 
+Funds remain reserved. 
+Transaction enters retry mode. 
+No duplicate withdrawal is allowed. 
+ 
+104. NO WINNER EDGE CASE 
+In theory impossible because every candle is either: 
+Green 
+or 
+Red 
+One side always wins. 
+ 
+105. EMPTY POOL EDGE CASE 
+If one side contains zero participants: 
+Pool remains valid. 
+The platform follows configured settlement rules. 
+Recommended Rule: 
+Pool cancelled and stakes returned. 
+ 
+106. ORPHAN REFERRAL EDGE CASE 
+If referral chain ends before Level 20: 
+Remaining levels treated as unqualified. 
+Corresponding commissions move to Platform Profit Wallet. 
+ 
+107. REWARD POOL EDGE CASE 
+If no qualified users exist: 
+Funds remain accumulated. 
+No distribution occurs. 
+No mapping occurs. 
+ 
+108. FIRST QUALIFIED USER EDGE 
+CASE 
+When first user qualifies: 
+Entire accumulated balance becomes claimable. 
+No platform retention occurs. 
+ 
+109. RULE ENGINE SUMMARY 
+The Rule Engine governs: 
+Pool Rules 
+Trade Rules 
+Qualification Rules 
+Referral Rules 
+Reward Pool Rules 
+Withdrawal Rules 
+Settlement Rules 
+Audit Rules 
+ 
+110. CORE BUSINESS RULES 
+Rule 1 
+Every user must join through a referral link. 
+ 
+Rule 2 
+Every user must connect a wallet. 
+ 
+Rule 3 
+BTCUSD Spot is the only supported asset. 
+ 
+Rule 4 
+Users predict Red or Green only. 
+ 
+Rule 5 
+Trade Amount: 
+Minimum = $1 
+Maximum = $1,000 
+ 
+Rule 6 
+Winning Reward Distribution: 
+User = 70% 
+Referral = 20% 
+Platform = 10% 
+ 
+Rule 7 
+Referral Structure: 
+20 Levels 
+1% Per Level 
+ 
+Rule 8 
+Referral Qualification: 
+Self Volume + Direct Referral Volume 
+Required Volume = Level ├ù $100 
+ 
+Rule 9 
+Reward Pool Qualification: 
+Pool 1 = $5,000 
+Pool 2 = $25,000 
+Pool 3 = $50,000 
+Pool 4 = $100,000 
+Qualification Formula: 
+Self Volume + Direct Referral Volume 
+ 
+Rule 10 
+Reward Pool Qualification is lifetime. 
+ 
+Rule 11 
+Profit Wallet Withdrawal Charge: 
+10% 
+ 
+Rule 12 
+Reward Pool Funding: 
+Pool 1 = 40% 
+Pool 2 = 30% 
+Pool 3 = 20% 
+Pool 4 = 10% 
+ 
+Rule 13 
+Reward Claims are free. 
+ 
+Rule 14 
+Reward Claims transfer directly to connected wallet. 
+ 
+Rule 15 
+All transactions must be auditable. 
+ 
+111. PROJECT CONCLUSION 
+The BTC Binary Prediction Trading Platform is a decentralized Telegram-native prediction 
+ecosystem combining: 
+ÔÇó 
+Bitcoin Prediction Markets 
+ÔÇó 
+Multi-Wallet Trading 
+ÔÇó 
+20-Level Referral Rewards 
+ÔÇó 
+Lifetime Reward Pools 
+ÔÇó 
+Transparent Settlement 
+ÔÇó 
+Smart Contract Distribution 
+ÔÇó 
+Full Auditability 
+The platform is designed to create a self-sustaining community-driven ecosystem where trading 
+activity, referral growth, and reward distribution operate under transparent and predefined 
+business rules. 
+ 
+
