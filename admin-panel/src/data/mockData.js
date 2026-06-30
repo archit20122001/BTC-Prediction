@@ -8,6 +8,9 @@ export const dashboardStats = [
   { label: 'Platform Revenue', value: '$412,580', change: '+18.4%', up: true, icon: 'fa-coins', color: 'gold' },
   { label: 'Referral Distribution', value: '$824,160', change: '+14.2%', up: true, icon: 'fa-sitemap', color: 'blue' },
   { label: 'Reward Pool Balance', value: '$98,450', change: '-2.1%', up: false, icon: 'fa-gift', color: 'red' },
+  { label: 'Pending Withdrawals', value: '$18,450', change: '+4.1%', up: true, icon: 'fa-clock', color: 'orange' },
+  { label: 'Total Pools Settled', value: '14,240', change: '+9.8%', up: true, icon: 'fa-gavel', color: 'indigo' },
+  { label: 'Chargeback / Disputes', value: '3', change: '-50.0%', up: false, icon: 'fa-exclamation-triangle', color: 'rose' },
 ];
 
 export const volumeChartData = [
@@ -18,6 +21,21 @@ export const volumeChartData = [
   { name: 'Fri', volume: 89000, users: 1890 },
   { name: 'Sat', volume: 95000, users: 2100 },
   { name: 'Sun', volume: 78000, users: 1750 },
+  { name: 'Mon (Prev)', volume: 39000, users: 1100 },
+  { name: 'Tue (Prev)', volume: 52000, users: 1300 },
+  { name: 'Wed (Prev)', volume: 48000, users: 1250 },
+  // Tripled Data Additions
+  { name: 'Thu (Prev)', volume: 68000, users: 1510 },
+  { name: 'Fri (Prev)', volume: 82000, users: 1740 },
+  { name: 'Sat (Prev)', volume: 91000, users: 1980 },
+  { name: 'Sun (Prev)', volume: 72000, users: 1600 },
+  { name: 'Mon (Proj)', volume: 45000, users: 1250 },
+  { name: 'Tue (Proj)', volume: 61000, users: 1500 },
+  { name: 'Wed (Proj)', volume: 54000, users: 1420 },
+  { name: 'Thu (Proj)', volume: 76000, users: 1680 },
+  { name: 'Fri (Proj)', volume: 93000, users: 1950 },
+  { name: 'Sat (Proj)', volume: 99000, users: 2200 },
+  { name: 'Sun (Proj)', volume: 82000, users: 1850 },
 ];
 
 export const poolDistributionData = [
@@ -33,6 +51,20 @@ export const recentTrades = [
   { pool: 'POOL-3M-20260629-0041', type: '3 Min', greenVol: '$15,680', redVol: '$14,920', status: 'Completed', result: 'Green', time: '11:27 AM' },
   { pool: 'POOL-4H-20260629-0003', type: '4 Hour', greenVol: '$45,200', redVol: '$52,100', status: 'Open', result: '-', time: '08:00 AM' },
   { pool: 'POOL-1D-20260629-0001', type: '1 Day', greenVol: '$88,400', redVol: '$76,300', status: 'Open', result: '-', time: '00:00 AM' },
+  { pool: 'POOL-3M-20260629-0043', type: '3 Min', greenVol: '$9,200', redVol: '$7,850', status: 'Locked', result: '-', time: '11:36 AM' },
+  { pool: 'POOL-5M-20260629-0019', type: '5 Min', greenVol: '$18,750', redVol: '$22,100', status: 'Open', result: '-', time: '11:35 AM' },
+  // Tripled Data Additions
+  { pool: 'POOL-3M-20260629-0044', type: '3 Min', greenVol: '$21,300', redVol: '$19,850', status: 'Completed', result: 'Green', time: '11:15 AM' },
+  { pool: 'POOL-5M-20260629-0020', type: '5 Min', greenVol: '$35,600', redVol: '$38,200', status: 'Open', result: '-', time: '11:10 AM' },
+  { pool: 'POOL-4H-20260629-0004', type: '4 Hour', greenVol: '$156,300', redVol: '$142,800', status: 'Open', result: '-', time: '07:00 AM' },
+  { pool: 'POOL-1D-20260629-0002', type: '1 Day', greenVol: '$234,500', redVol: '$198,300', status: 'Locked', result: '-', time: '00:00 AM' },
+  { pool: 'POOL-3M-20260629-0045', type: '3 Min', greenVol: '$14,500', redVol: '$16,200', status: 'Locked', result: '-', time: '11:12 AM' },
+  { pool: 'POOL-3M-20260629-0046', type: '3 Min', greenVol: '$11,700', redVol: '$13,400', status: 'Open', result: '-', time: '11:00 AM' },
+  { pool: 'POOL-5M-20260629-0021', type: '5 Min', greenVol: '$42,100', redVol: '$38,900', status: 'Open', result: '-', time: '11:05 AM' },
+  { pool: 'POOL-3M-20260629-0047', type: '3 Min', greenVol: '$8,450', redVol: '$9,100', status: 'Open', result: '-', time: '11:42 AM' },
+  { pool: 'POOL-5M-20260629-0022', type: '5 Min', greenVol: '$24,600', redVol: '$21,350', status: 'Open', result: '-', time: '11:40 AM' },
+  { pool: 'POOL-3M-20260629-0048', type: '3 Min', greenVol: '$17,200', redVol: '$15,400', status: 'Completed', result: 'Green', time: '11:45 AM' },
+  { pool: 'POOL-4H-20260629-0005', type: '4 Hour', greenVol: '$67,800', redVol: '$71,200', status: 'Completed', result: 'Red', time: '06:00 AM' },
 ];
 
 export const usersData = [
@@ -44,6 +76,24 @@ export const usersData = [
   { id: 'USR-00006', tgId: '@hodlmaster', wallet: '0x8dE7...3c5F', sponsor: 'USR-00003', regDate: '2026-03-01', status: 'Frozen', depositBal: '$2,340', profitBal: '$0', volume: '$15,800' },
   { id: 'USR-00007', tgId: '@satoshi99', wallet: '0x4aB2...7f1G', sponsor: 'USR-00004', regDate: '2026-03-15', status: 'Active', depositBal: '$11,200', profitBal: '$34,500', volume: '$210,400' },
   { id: 'USR-00008', tgId: '@bullrunner', wallet: '0x6cD9...2e8H', sponsor: 'USR-00004', regDate: '2026-04-02', status: 'Active', depositBal: '$3,450', profitBal: '$9,120', volume: '$72,600' },
+  { id: 'USR-00009', tgId: '@zen_scalper', wallet: '0x3eA4...1b8F', sponsor: 'USR-00007', regDate: '2026-04-18', status: 'Active', depositBal: '$5,400', profitBal: '$11,210', volume: '$93,500' },
+  { id: 'USR-00010', tgId: '@margin_call', wallet: '0x8fC2...9a5B', sponsor: 'USR-00008', regDate: '2026-05-01', status: 'Active', depositBal: '$1,200', profitBal: '$450', volume: '$12,400' },
+  { id: 'USR-00011', tgId: '@alpha_omega', wallet: '0x5dE1...7b4C', sponsor: 'USR-00005', regDate: '2026-05-20', status: 'Suspended', depositBal: '$12,000', profitBal: '$0', volume: '$430,000' },
+  // Tripled Data Additions
+  { id: 'USR-00012', tgId: '@eth_maxi', wallet: '0x2bC4...8f9D', sponsor: 'USR-00007', regDate: '2026-05-22', status: 'Active', depositBal: '$6,800', profitBal: '$14,350', volume: '$112,000' },
+  { id: 'USR-00013', tgId: '@sol_sniper', wallet: '0x9aF1...3e7A', sponsor: 'USR-00009', regDate: '2026-05-28', status: 'Active', depositBal: '$2,100', profitBal: '$5,200', volume: '$34,900' },
+  { id: 'USR-00014', tgId: '@defi_yield', wallet: '0x4dC8...6b1E', sponsor: 'USR-00010', regDate: '2026-06-02', status: 'Active', depositBal: '$15,000', profitBal: '$42,100', volume: '$310,000' },
+  { id: 'USR-00015', tgId: '@risktaker', wallet: '0x7fE3...2d9C', sponsor: 'USR-00008', regDate: '2026-06-05', status: 'Active', depositBal: '$850', profitBal: '$1,920', volume: '$18,500' },
+  { id: 'USR-00016', tgId: '@block_ninja', wallet: '0x1aB9...5c4F', sponsor: 'USR-00012', regDate: '2026-06-10', status: 'Frozen', depositBal: '$4,000', profitBal: '$1,100', volume: '$22,000' },
+  { id: 'USR-00017', tgId: '@whaleshark', wallet: '0x6bE2...9f8A', sponsor: 'USR-00000', regDate: '2026-06-12', status: 'Active', depositBal: '$75,000', profitBal: '$184,000', volume: '$920,000' },
+  { id: 'USR-00018', tgId: '@apex_trader', wallet: '0x3cD4...7e1B', sponsor: 'USR-00014', regDate: '2026-06-15', status: 'Active', depositBal: '$9,300', profitBal: '$24,500', volume: '$165,000' },
+  { id: 'USR-00019', tgId: '@gas_guzzler', wallet: '0x8bF5...4a3D', sponsor: 'USR-00013', regDate: '2026-06-18', status: 'Active', depositBal: '$1,750', profitBal: '$3,800', volume: '$29,400' },
+  { id: 'USR-00020', tgId: '@liquidator', wallet: '0x5eC9...1f2G', sponsor: 'USR-00015', regDate: '2026-06-20', status: 'Active', depositBal: '$3,200', profitBal: '$7,400', volume: '$58,000' },
+  { id: 'USR-00021', tgId: '@matrix_run', wallet: '0x2fA7...8c6E', sponsor: 'USR-00017', regDate: '2026-06-22', status: 'Suspended', depositBal: '$0', profitBal: '$550', volume: '$14,200' },
+  { id: 'USR-00022', tgId: '@pump_master', wallet: '0x9dD3...4b5F', sponsor: 'USR-00018', regDate: '2026-06-25', status: 'Active', depositBal: '$5,100', profitBal: '$11,900', volume: '$84,000' },
+  { id: 'USR-00023', tgId: '@gamma_scalp', wallet: '0x1eA6...3d2C', sponsor: 'USR-00019', regDate: '2026-06-26', status: 'Active', depositBal: '$12,400', profitBal: '$29,000', volume: '$215,000' },
+  { id: 'USR-00024', tgId: '@alpha_omega2', wallet: '0x4fB8...9e1A', sponsor: 'USR-00005', regDate: '2026-06-28', status: 'Active', depositBal: '$2,500', profitBal: '$4,100', volume: '$31,000' },
+  { id: 'USR-00025', tgId: '@cyber_bull', wallet: '0x7cC1...5b9E', sponsor: 'USR-00022', regDate: '2026-06-29', status: 'Active', depositBal: '$8,900', profitBal: '$16,400', volume: '$104,000' },
 ];
 
 export const poolsData = [
@@ -64,6 +114,24 @@ export const poolsData = [
   { id: 'POOL-1D-20260629-0003', type: '1 Day', asset: 'BTC', openTime: '00:00:00', lockTime: '20:00:00', closeTime: '00:00:00', status: 'Completed', greenVol: '$312,400', redVol: '$287,600', greenCount: 1890, redCount: 1652, total: '$600,000', result: 'Green' },
   { id: 'POOL-5M-20260629-0021', type: '5 Min', asset: 'BTC', openTime: '11:05:00', lockTime: '11:08:00', closeTime: '11:10:00', status: 'Open', greenVol: '$42,100', redVol: '$38,900', greenCount: 128, redCount: 118, total: '$81,000' },
   { id: 'POOL-3M-20260629-0046', type: '3 Min', asset: 'PAXG', openTime: '11:00:00', lockTime: '11:01:30', closeTime: '11:03:00', status: 'Open', greenVol: '$11,700', redVol: '$13,400', greenCount: 36, redCount: 41, total: '$25,100' },
+  { id: 'POOL-3M-20260629-0039', type: '3 Min', asset: 'BTC', openTime: '10:57:00', lockTime: '10:58:30', closeTime: '11:00:00', status: 'Completed', greenVol: '$14,200', redVol: '$18,600', greenCount: 39, redCount: 51, total: '$32,800', result: 'Red' },
+  { id: 'POOL-5M-20260629-0017', type: '5 Min', asset: 'PAXG', openTime: '10:50:00', lockTime: '10:53:00', closeTime: '10:55:00', status: 'Completed', greenVol: '$22,400', redVol: '$19,100', greenCount: 74, redCount: 68, total: '$41,500', result: 'Green' },
+  // Tripled Data Additions
+  { id: 'POOL-3M-20260629-0047', type: '3 Min', asset: 'BTC', openTime: '11:36:00', lockTime: '11:37:30', closeTime: '11:39:00', status: 'Open', greenVol: '$8,450', redVol: '$9,100', greenCount: 22, redCount: 29, total: '$17,550' },
+  { id: 'POOL-5M-20260629-0022', type: '5 Min', asset: 'PAXG', openTime: '11:35:00', lockTime: '11:38:00', closeTime: '11:40:00', status: 'Open', greenVol: '$24,600', redVol: '$21,350', greenCount: 71, redCount: 64, total: '$45,950' },
+  { id: 'POOL-3M-20260629-0048', type: '3 Min', asset: 'BTC', openTime: '11:39:00', lockTime: '11:40:30', closeTime: '11:42:00', status: 'Completed', greenVol: '$17,200', redVol: '$15,400', greenCount: 49, redCount: 41, total: '$32,600', result: 'Green' },
+  { id: 'POOL-3M-20260629-0049', type: '3 Min', asset: 'PAXG', openTime: '11:42:00', lockTime: '11:43:30', closeTime: '11:45:00', status: 'Open', greenVol: '$13,100', redVol: '$12,800', greenCount: 34, redCount: 31, total: '$25,900' },
+  { id: 'POOL-5M-20260629-0023', type: '5 Min', asset: 'BTC', openTime: '11:40:00', lockTime: '11:43:00', closeTime: '11:45:00', status: 'Open', greenVol: '$31,400', redVol: '$34,900', greenCount: 92, redCount: 104, total: '$66,300' },
+  { id: 'POOL-4H-20260629-0006', type: '4 Hour', asset: 'PAXG', openTime: '12:00:00', lockTime: '15:00:00', closeTime: '16:00:00', status: 'Open', greenVol: '$52,000', redVol: '$49,500', greenCount: 144, redCount: 135, total: '$101,500' },
+  { id: 'POOL-1D-20260629-0004', type: '1 Day', asset: 'PAXG', openTime: '00:00:00', lockTime: '20:00:00', closeTime: '00:00:00', status: 'Open', greenVol: '$198,000', redVol: '$210,500', greenCount: 520, redCount: 545, total: '$408,500' },
+  { id: 'POOL-3M-20260629-0038', type: '3 Min', asset: 'BTC', openTime: '10:54:00', lockTime: '10:55:30', closeTime: '10:57:00', status: 'Completed', greenVol: '$11,200', redVol: '$9,400', greenCount: 32, redCount: 26, total: '$20,600', result: 'Green' },
+  { id: 'POOL-3M-20260629-0037', type: '3 Min', asset: 'PAXG', openTime: '10:51:00', lockTime: '10:52:30', closeTime: '10:54:00', status: 'Completed', greenVol: '$8,500', redVol: '$12,100', greenCount: 21, redCount: 35, total: '$20,600', result: 'Red' },
+  { id: 'POOL-5M-20260629-0016', type: '5 Min', asset: 'BTC', openTime: '10:45:00', lockTime: '10:48:00', closeTime: '10:50:00', status: 'Completed', greenVol: '$41,500', redVol: '$37,200', greenCount: 112, redCount: 98, total: '$78,700', result: 'Green' },
+  { id: 'POOL-3M-20260629-0036', type: '3 Min', asset: 'BTC', openTime: '10:48:00', lockTime: '10:49:30', closeTime: '10:51:00', status: 'Completed', greenVol: '$16,300', redVol: '$14,900', greenCount: 47, redCount: 42, total: '$31,200', result: 'Green' },
+  { id: 'POOL-3M-20260629-0035', type: '3 Min', asset: 'PAXG', openTime: '10:45:00', lockTime: '10:46:30', closeTime: '10:48:00', status: 'Completed', greenVol: '$9,800', redVol: '$10,500', greenCount: 27, redCount: 30, total: '$20,300', result: 'Red' },
+  { id: 'POOL-5M-20260629-0015', type: '5 Min', asset: 'PAXG', openTime: '10:40:00', lockTime: '10:43:00', closeTime: '10:45:00', status: 'Completed', greenVol: '$29,300', redVol: '$32,100', greenCount: 88, redCount: 94, total: '$61,400', result: 'Red' },
+  { id: 'POOL-4H-20260629-0002', type: '4 Hour', asset: 'BTC', openTime: '04:00:00', lockTime: '07:00:00', closeTime: '08:00:00', status: 'Completed', greenVol: '$112,400', redVol: '$124,600', greenCount: 310, redCount: 345, total: '$237,000', result: 'Red' },
+  { id: 'POOL-1D-20260628-0001', type: '1 Day', asset: 'BTC', openTime: '00:00:00', lockTime: '20:00:00', closeTime: '00:00:00', status: 'Completed', greenVol: '$294,500', redVol: '$312,000', greenCount: 1640, redCount: 1780, total: '$606,500', result: 'Red' },
 ];
 
 export const rewardPoolsData = [
@@ -71,6 +139,12 @@ export const rewardPoolsData = [
   { id: 'Pool 2', qualification: '$25,000', allocation: '30%', balance: '$28,650', qualified: 45, distributed: '$186,300', claimed: '$172,100', pending: '$14,200' },
   { id: 'Pool 3', qualification: '$50,000', allocation: '20%', balance: '$18,420', qualified: 12, distributed: '$94,800', claimed: '$88,600', pending: '$6,200' },
   { id: 'Pool 4', qualification: '$100,000', allocation: '10%', balance: '$9,200', qualified: 4, distributed: '$38,500', claimed: '$35,200', pending: '$3,300' },
+  { id: 'Pool 5 (Whale)', qualification: '$250,000', allocation: '5%', balance: '$5,100', qualified: 1, distributed: '$25,000', claimed: '$25,000', pending: '$0' },
+  // Tripled Data Additions (New sub-tier mappings or historical metrics)
+  { id: 'Pool 1A (Micro)', qualification: '$1,000', allocation: '15%', balance: '$15,400', qualified: 412, distributed: '$124,500', claimed: '$121,000', pending: '$3,500' },
+  { id: 'Pool 2B (Mid)', qualification: '$15,000', allocation: '25%', balance: '$21,300', qualified: 78, distributed: '$142,000', claimed: '$134,200', pending: '$7,800' },
+  { id: 'Pool 3B (Pro)', qualification: '$75,000', allocation: '12%', balance: '$12,150', qualified: 8, distributed: '$64,000', claimed: '$59,500', pending: '$4,500' },
+  { id: 'Pool 5B (Mega)', qualification: '$500,000', allocation: '3%', balance: '$2,500', qualified: 0, distributed: '$0', claimed: '$0', pending: '$0' },
 ];
 
 export const rewardMappings = [
@@ -79,6 +153,20 @@ export const rewardMappings = [
   { id: 'RPM-000410', user: 'USR-00001', pool: 'Pool 2', amount: '$83.33', source: 'WD-002183', date: '2026-06-28', status: 'Claimed' },
   { id: 'RPM-000409', user: 'USR-00007', pool: 'Pool 1', amount: '$50.00', source: 'WD-002180', date: '2026-06-28', status: 'Claimed' },
   { id: 'RPM-000408', user: 'USR-00002', pool: 'Pool 1', amount: '$50.00', source: 'WD-002180', date: '2026-06-28', status: 'Claimed' },
+  { id: 'RPM-000413', user: 'USR-00009', pool: 'Pool 2', amount: '$210.00', source: 'WD-002190', date: '2026-06-29', status: 'Unclaimed' },
+  { id: 'RPM-000414', user: 'USR-00005', pool: 'Pool 3', amount: '$450.00', source: 'WD-002186', date: '2026-06-29', status: 'Claimed' },
+  // Tripled Data Additions
+  { id: 'RPM-000415', user: 'USR-00012', pool: 'Pool 1', amount: '$60.00', source: 'WD-002187', date: '2026-06-29', status: 'Claimed' },
+  { id: 'RPM-000416', user: 'USR-00014', pool: 'Pool 3', amount: '$420.00', source: 'WD-002191', date: '2026-06-29', status: 'Unclaimed' },
+  { id: 'RPM-000417', user: 'USR-00017', pool: 'Pool 5 (Whale)', amount: '$1,250.00', source: 'WD-002193', date: '2026-06-29', status: 'Claimed' },
+  { id: 'RPM-000418', user: 'USR-00018', pool: 'Pool 2', amount: '$190.00', source: 'WD-002194', date: '2026-06-29', status: 'Unclaimed' },
+  { id: 'RPM-000419', user: 'USR-00023', pool: 'Pool 2', amount: '$230.00', source: 'WD-002195', date: '2026-06-30', status: 'Unclaimed' },
+  { id: 'RPM-000420', user: 'USR-00004', pool: 'Pool 1', amount: '$45.00', source: 'WD-002181', date: '2026-06-27', status: 'Claimed' },
+  { id: 'RPM-000421', user: 'USR-00008', pool: 'Pool 1', amount: '$75.00', source: 'WD-002182', date: '2026-06-27', status: 'Claimed' },
+  { id: 'RPM-000422', user: 'USR-00013', pool: 'Pool 1', amount: '$35.00', source: 'WD-002188', date: '2026-06-29', status: 'Unclaimed' },
+  { id: 'RPM-000423', user: 'USR-00015', pool: 'Pool 1', amount: '$90.00', source: 'WD-002189', date: '2026-06-29', status: 'Claimed' },
+  { id: 'RPM-000424', user: 'USR-00020', pool: 'Pool 2', amount: '$140.00', source: 'WD-002196', date: '2026-06-30', status: 'Unclaimed' },
+  { id: 'RPM-000425', user: 'USR-00025', pool: 'Pool 1', amount: '$110.00', source: 'WD-002197', date: '2026-06-30', status: 'Unclaimed' },
 ];
 
 export const settlementsData = [
@@ -87,6 +175,20 @@ export const settlementsData = [
   { id: 'SET-004819', pool: 'POOL-5M-20260629-0017', winner: 'Green', losingPool: '$22,400', userReward: '$15,680', referral: '$4,480', platform: '$2,240', date: '11:25 AM' },
   { id: 'SET-004818', pool: 'POOL-3M-20260629-0039', winner: 'Red', losingPool: '$18,600', userReward: '$13,020', referral: '$3,720', platform: '$1,860', date: '11:21 AM' },
   { id: 'SET-004817', pool: 'POOL-3M-20260629-0038', winner: 'Green', losingPool: '$6,200', userReward: '$4,340', referral: '$1,240', platform: '$620', date: '11:18 AM' },
+  { id: 'SET-004822', pool: 'POOL-1D-20260629-0003', winner: 'Green', losingPool: '$287,600', userReward: '$201,320', referral: '$57,520', platform: '$28,760', date: '11:00 AM' },
+  { id: 'SET-004823', pool: 'POOL-4H-20260629-0005', winner: 'Red', losingPool: '$67,800', userReward: '$47,460', referral: '$13,560', platform: '$6,780', date: '10:00 AM' },
+  // Tripled Data Additions (Matches math structure: Reward 70%, Referral 20%, Platform 10%)
+  { id: 'SET-004824', pool: 'POOL-3M-20260629-0048', winner: 'Green', losingPool: '$15,400', userReward: '$10,780', referral: '$3,080', platform: '$1,540', date: '11:42 AM' },
+  { id: 'SET-004825', pool: 'POOL-3M-20260629-0037', winner: 'Red', losingPool: '$8,500', userReward: '$5,950', referral: '$1,700', platform: '$850', date: '10:54 AM' },
+  { id: 'SET-004826', pool: 'POOL-5M-20260629-0016', winner: 'Green', losingPool: '$37,200', userReward: '$26,040', referral: '$7,440', platform: '$3,720', date: '10:50 AM' },
+  { id: 'SET-004827', pool: 'POOL-3M-20260629-0036', winner: 'Green', losingPool: '$14,900', userReward: '$10,430', referral: '$2,980', platform: '$1,490', date: '10:48 AM' },
+  { id: 'SET-004828', pool: 'POOL-3M-20260629-0035', winner: 'Red', losingPool: '$9,800', userReward: '$6,860', referral: '$1,960', platform: '$980', date: '10:45 AM' },
+  { id: 'SET-004829', pool: 'POOL-5M-20260629-0015', winner: 'Red', losingPool: '$29,300', userReward: '$20,510', referral: '$5,860', platform: '$2,930', date: '10:40 AM' },
+  { id: 'SET-004830', pool: 'POOL-4H-20260629-0002', winner: 'Red', losingPool: '$112,400', userReward: '$78,680', referral: '$22,480', platform: '$11,240', date: '08:00 AM' },
+  { id: 'SET-004831', pool: 'POOL-1D-20260628-0001', winner: 'Red', losingPool: '$294,500', userReward: '$206,150', referral: '$58,900', platform: '$29,450', date: '12:00 AM' },
+  { id: 'SET-004832', pool: 'POOL-3M-20260629-0034', winner: 'Green', losingPool: '$11,400', userReward: '$7,980', referral: '$2,280', platform: '$1,140', date: '10:33 AM' },
+  { id: 'SET-004833', pool: 'POOL-3M-20260629-0033', winner: 'Red', losingPool: '$7,100', userReward: '$4,970', referral: '$1,420', platform: '$710', date: '10:30 AM' },
+  { id: 'SET-004834', pool: 'POOL-5M-20260629-0014', winner: 'Green', losingPool: '$18,900', userReward: '$13,230', referral: '$3,780', platform: '$1,890', date: '10:25 AM' },
 ];
 
 export const withdrawalsData = [
@@ -96,6 +198,19 @@ export const withdrawalsData = [
   { id: 'WD-002187', user: 'USR-00002', type: 'Deposit', requested: '$1,000', charge: '$0', net: '$1,000', status: 'Completed', date: '2026-06-29 09:15' },
   { id: 'WD-002186', user: 'USR-00001', type: 'Profit', requested: '$5,000', charge: '$500', net: '$4,500', status: 'Completed', date: '2026-06-28 22:30' },
   { id: 'WD-002185', user: 'USR-00005', type: 'Profit', requested: '$800', charge: '$80', net: '$720', status: 'Failed', date: '2026-06-28 20:10' },
+  { id: 'WD-002191', user: 'USR-00009', type: 'Profit', requested: '$3,500', charge: '$350', net: '$3,150', status: 'Pending', date: '2026-06-29 12:02' },
+  { id: 'WD-002192', user: 'USR-00011', type: 'Deposit', requested: '$12,000', charge: '$0', net: '$12,000', status: 'Rejected', date: '2026-06-29 11:45' },
+  // Tripled Data Additions (Matches 10% configuration update change logic dynamically)
+  { id: 'WD-002193', user: 'USR-00017', type: 'Profit', requested: '$10,000', charge: '$1,000', net: '$9,000', status: 'Completed', date: '2026-06-29 12:15' },
+  { id: 'WD-002194', user: 'USR-00018', type: 'Profit', requested: '$1,900', charge: '$190', net: '$1,710', status: 'Pending', date: '2026-06-29 12:30' },
+  { id: 'WD-002195', user: 'USR-00023', type: 'Profit', requested: '$2,300', charge: '$230', net: '$2,070', status: 'Pending', date: '2026-06-30 08:15' },
+  { id: 'WD-002196', user: 'USR-00020', type: 'Profit', requested: '$1,400', charge: '$140', net: '$1,260', status: 'Completed', date: '2026-06-30 09:20' },
+  { id: 'WD-002197', user: 'USR-00025', type: 'Profit', requested: '$1,100', charge: '$110', net: '$990', status: 'Completed', date: '2026-06-30 10:05' },
+  { id: 'WD-002184', user: 'USR-00007', type: 'Profit', requested: '$2,500', charge: '$250', net: '$2,250', status: 'Completed', date: '2026-06-28 18:40' },
+  { id: 'WD-002183', user: 'USR-00001', type: 'Profit', requested: '$1,200', charge: '$120', net: '$1,080', status: 'Completed', date: '2026-06-28 15:30' },
+  { id: 'WD-002182', user: 'USR-00008', type: 'Profit', requested: '$750', charge: '$75', net: '$675', status: 'Completed', date: '2026-06-27 14:15' },
+  { id: 'WD-002181', user: 'USR-00004', type: 'Profit', requested: '$450', charge: '$45', net: '$405', status: 'Completed', date: '2026-06-27 11:10' },
+  { id: 'WD-002180', user: 'USR-00002', type: 'Profit', requested: '$1,000', charge: '$100', net: '$900', status: 'Completed', date: '2026-06-26 19:22' },
 ];
 
 export const auditLogs = [
@@ -107,6 +222,20 @@ export const auditLogs = [
   { id: 'LOG-028396', action: 'UserSuspended', ref: 'USR-00003', user: 'Admin', time: '11:15:00 AM', desc: 'Account suspended - Wash trading detected' },
   { id: 'LOG-028395', action: 'ReferralPaid', ref: 'SET-004820', user: 'System', time: '11:27:02 AM', desc: 'Referral commissions distributed L1-L8' },
   { id: 'LOG-028394', action: 'RewardClaimed', ref: 'RPM-000410', user: 'USR-00001', time: '11:10:30 AM', desc: 'Reward Pool 2 claim $83.33' },
+  { id: 'LOG-028402', action: 'UserSuspended', ref: 'USR-00011', user: 'Admin', time: '11:46:12 AM', desc: 'Account suspended due to multi-accounting flag' },
+  { id: 'LOG-028403', action: 'ConfigUpdated', ref: 'SYS-SETTINGS', user: 'Admin', time: '11:50:00 AM', desc: 'Global platform withdrawal fee changed from 8% to 10%' },
+  // Tripled Data Additions
+  { id: 'LOG-028404', action: 'WithdrawalExecuted', ref: 'WD-002193', user: 'USR-00017', time: '12:15:22 PM', desc: 'Profit wallet withdrawal $10,000' },
+  { id: 'LOG-028405', action: 'TradePlaced', ref: 'POOL-3M-0047', user: 'USR-00012', time: '11:37:05 AM', desc: 'Red prediction $500' },
+  { id: 'LOG-028406', action: 'TradePlaced', ref: 'POOL-5M-0022', user: 'USR-00013', time: '11:36:12 AM', desc: 'Green prediction $150' },
+  { id: 'LOG-028407', action: 'PoolSettled', ref: 'POOL-3M-0048', user: 'System', time: '11:42:01 AM', desc: 'Pool settled - Winner: Green' },
+  { id: 'LOG-028408', action: 'RewardDistributed', ref: 'SET-004824', user: 'System', time: '11:42:00 AM', desc: 'Settlement rewards distributed to 49 winners' },
+  { id: 'LOG-028409', action: 'UserSuspended', ref: 'USR-00016', user: 'Admin', time: '11:55:10 AM', desc: 'Account suspended - Chargeback dispute initialization' },
+  { id: 'LOG-028410', action: 'DepositDetected', ref: 'DEP-009214', user: 'USR-00014', time: '12:02:44 PM', desc: 'External on-chain deposit confirmed $15,000' },
+  { id: 'LOG-028411', action: 'WithdrawalRejected', ref: 'WD-002192', user: 'Admin', time: '11:48:00 AM', desc: 'Deposit wallet refund request rejected' },
+  { id: 'LOG-028412', action: 'UserSuspended', ref: 'USR-00021', user: 'Admin', time: '12:20:00 PM', desc: 'Account suspended - Sybil link detected to USR-00003' },
+  { id: 'LOG-028413', action: 'RewardClaimed', ref: 'RPM-000414', user: 'System', time: '12:25:30 PM', desc: 'Reward Pool 3 claim $450.00' },
+  { id: 'LOG-028414', action: 'TradePlaced', ref: 'POOL-1D-0004', user: 'USR-00023', time: '12:28:11 PM', desc: 'Red prediction $2,500' },
 ];
 
 export const reportChartData = {
@@ -118,6 +247,19 @@ export const reportChartData = {
     { name: 'Jun 27', volume: 201000, revenue: 20100 },
     { name: 'Jun 28', volume: 176000, revenue: 17600 },
     { name: 'Jun 29', volume: 184000, revenue: 18400 },
+    { name: 'Jun 30', volume: 192500, revenue: 19250 },
+    // Tripled Data Additions (Rolling Backwards and Forward Projections)
+    { name: 'Jul 01 (Proj)', volume: 198000, revenue: 19800 },
+    { name: 'Jul 02 (Proj)', volume: 210000, revenue: 21000 },
+    { name: 'Jul 03 (Proj)', volume: 225000, revenue: 22500 },
+    { name: 'Jun 15', volume: 130000, revenue: 13000 },
+    { name: 'Jun 16', volume: 145000, revenue: 14500 },
+    { name: 'Jun 17', volume: 138000, revenue: 13800 },
+    { name: 'Jun 18', volume: 162000, revenue: 16200 },
+    { name: 'Jun 19', volume: 175000, revenue: 17500 },
+    { name: 'Jun 20', volume: 190000, revenue: 19000 },
+    { name: 'Jun 21', volume: 168000, revenue: 16800 },
+    { name: 'Jun 22', volume: 151000, revenue: 15100 },
   ],
   weekly: [
     { name: 'W22', volume: 820000, revenue: 82000 },
@@ -125,5 +267,16 @@ export const reportChartData = {
     { name: 'W24', volume: 1020000, revenue: 102000 },
     { name: 'W25', volume: 1180000, revenue: 118000 },
     { name: 'W26', volume: 1215000, revenue: 121500 },
+    { name: 'W27', volume: 1290000, revenue: 129000 },
+    // Tripled Data Additions
+    { name: 'W16', volume: 710000, revenue: 71000 },
+    { name: 'W17', volume: 740000, revenue: 74000 },
+    { name: 'W18', volume: 790000, revenue: 79000 },
+    { name: 'W19', volume: 815000, revenue: 81500 },
+    { name: 'W20', volume: 850000, revenue: 85000 },
+    { name: 'W21', volume: 890000, revenue: 89000 },
+    { name: 'W28 (Proj)', volume: 1340000, revenue: 134000 },
+    { name: 'W29 (Proj)', volume: 1390000, revenue: 139000 },
+    { name: 'W30 (Proj)', volume: 1450000, revenue: 145000 },
   ],
 };

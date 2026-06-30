@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Dashboard from './pages/Dashboard';
 import UserManagement from './pages/UserManagement';
 import PoolManagement from './pages/PoolManagement';
+import PoolDetails from './pages/PoolDetails'; // Imported PoolDetails
 import RewardPools from './pages/RewardPools';
 import ReferralNetwork from './pages/ReferralNetwork';
 import Settlements from './pages/Settlements';
@@ -32,6 +33,7 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [modal, setModal] = useState({ type: null, data: null });
   const [detailUser, setDetailUser] = useState(null);
+  const [detailPool, setDetailPool] = useState(null); // Managed detail pool state
 
   const openModal = (type, data) => setModal({ type, data });
   const closeModal = () => setModal({ type: null, data: null });
@@ -43,6 +45,9 @@ export default function App() {
     } else if (type === 'wallet-ledger') {
       setDetailUser(data);
       setActivePage('user-detail');
+    } else if (type === 'pool-detail') {
+      setDetailPool(data);
+      setActivePage('pool-detail');
     }
   };
 
@@ -50,13 +55,14 @@ export default function App() {
     setActivePage(id);
     setSidebarOpen(false);
     setDetailUser(null);
+    setDetailPool(null);
   };
 
   const renderPage = () => {
     switch (activePage) {
       case 'dashboard': return <Dashboard />;
       case 'users': return <UserManagement onOpenModal={openModal} onNavigate={handleNavigate} />;
-      case 'pools': return <PoolManagement onOpenModal={openModal} />;
+      case 'pools': return <PoolManagement onNavigate={handleNavigate} />; // Swapped onOpenModal for onNavigate
       case 'rewards': return <RewardPools onOpenModal={openModal} />;
       case 'referrals': return <ReferralNetwork onOpenModal={openModal} />;
       case 'settlements': return <Settlements onOpenModal={openModal} />;
@@ -66,6 +72,7 @@ export default function App() {
       case 'security': return <Security />;
       case 'settings': return <Settings />;
       case 'user-detail': return <UserDetail user={detailUser} />;
+      case 'pool-detail': return <PoolDetails data={detailPool} onBack={() => setActivePage('pools')} />; // Injected Pool Details page component
       default: return <Dashboard />;
     }
   };
@@ -84,7 +91,7 @@ export default function App() {
           {navItems.map(item => (
             <button
               key={item.id}
-              className={`nav-item ${activePage === item.id ? 'active' : ''}`}
+              className={`nav-item ${activePage === item.id || (item.id === 'pools' && activePage === 'pool-detail') ? 'active' : ''}`}
               onClick={() => handleSidebarNav(item.id)}
             >
               <i className={`fas ${item.icon}`}></i>

@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { poolsData } from '../data/mockData';
 
-export default function PoolManagement({ onOpenModal }) {
+export default function PoolManagement({ onNavigate }) { // Swapped onOpenModal for onNavigate prop
   const [filters, setFilters] = useState({
     BTC: { '3 Min': false, '5 Min': false, '4 Hour': false, '1 Day': false, Open: false },
     PAXG: { '3 Min': false, '5 Min': false, '4 Hour': false, '1 Day': false, Open: false },
   });
-  
+
   const [lockedPools, setLockedPools] = useState({});
   const [activeTab, setActiveTab] = useState('active');
 
@@ -32,7 +32,7 @@ export default function PoolManagement({ onOpenModal }) {
     if (activeTab === 'history' && status !== 'completed') return false;
     if (activeTab === 'active' && status === 'completed') return false;
 
-    const isAnyFilterActive = Object.values(filters).some(assetObj => 
+    const isAnyFilterActive = Object.values(filters).some(assetObj =>
       Object.values(assetObj).some(isActive => isActive)
     );
 
@@ -63,7 +63,6 @@ export default function PoolManagement({ onOpenModal }) {
         <button className="btn btn-danger btn-sm"><i className="fas fa-lock" style={{ marginRight: 6 }}></i>Emergency Lock All</button>
       </div>
 
-      {/* Pool Stats */}
       <div className="stats-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
         {[
           { label: 'Active Pools', value: '3', icon: 'fa-play-circle', color: 'green' },
@@ -80,11 +79,9 @@ export default function PoolManagement({ onOpenModal }) {
       </div>
 
       <div className="card">
-        {/* Card Header pushing the slidable tabs container to the right */}
         <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '14px', borderBottom: '1px solid rgba(255, 255, 255, 0.05)' }}>
           <span className="card-title" style={{ margin: 0 }}>Trade Pools</span>
-          
-          {/* Slidable Switch Wrapper */}
+
           <div style={{
             position: 'relative',
             display: 'flex',
@@ -97,15 +94,14 @@ export default function PoolManagement({ onOpenModal }) {
             boxSizing: 'border-box',
             userSelect: 'none'
           }}>
-            
-            {/* Sliding background element */}
+
             <div style={{
               position: 'absolute',
               top: '3px',
               bottom: '3px',
               left: '3px',
               width: 'calc(50% - 3px)',
-              background: activeTab === 'active' ? '#1e3a2f' : '#3a2a18', // Custom green / orange-brown tones to match active context
+              background: activeTab === 'active' ? '#1e3a2f' : '#3a2a18',
               border: activeTab === 'active' ? '1px solid #10b981' : '1px solid #f59e0b',
               borderRadius: '9px',
               transform: activeTab === 'active' ? 'translateX(0)' : 'translateX(100%)',
@@ -113,7 +109,6 @@ export default function PoolManagement({ onOpenModal }) {
               zIndex: 1
             }} />
 
-            {/* Active Tab Button */}
             <button
               onClick={() => setActiveTab('active')}
               style={{
@@ -134,7 +129,6 @@ export default function PoolManagement({ onOpenModal }) {
               Active
             </button>
 
-            {/* History Tab Button */}
             <button
               onClick={() => setActiveTab('history')}
               style={{
@@ -156,14 +150,14 @@ export default function PoolManagement({ onOpenModal }) {
             </button>
           </div>
         </div>
-        
+
         <div className="card-body" style={{ paddingBottom: 0, paddingTop: '20px' }}>
           <div className="filter-bar" style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '20px', alignItems: 'flex-start' }}>
-            
+
             {Object.keys(filters).map(asset => (
               <div key={asset} style={{ display: 'flex', alignItems: 'center', gap: '20px', justifyContent: 'flex-start', width: '100%' }}>
                 <strong style={{ minWidth: '60px', textAlign: 'left', color: '#fff' }}>{asset}:</strong>
-                
+
                 {Object.keys(filters[asset]).map(filterKey => {
                   const isChecked = filters[asset][filterKey];
                   return (
@@ -194,7 +188,6 @@ export default function PoolManagement({ onOpenModal }) {
                 })}
               </div>
             ))}
-            
           </div>
         </div>
 
@@ -220,7 +213,11 @@ export default function PoolManagement({ onOpenModal }) {
             </thead>
             <tbody>
               {filtered.map((p, i) => (
-                <tr key={i} onClick={() => onOpenModal('pool-detail', p)}>
+                <tr
+                  key={i}
+                  onClick={() => onNavigate('pool-detail', p)} // Navigates to full page details view
+                  style={{ cursor: 'pointer' }}
+                >
                   <td style={{ fontWeight: 600, color: '#f59e0b' }}>{p.id}</td>
                   <td>{p.type}</td>
                   <td>{p.asset}</td>

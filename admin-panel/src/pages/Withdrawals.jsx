@@ -3,8 +3,14 @@ import { withdrawalsData } from '../data/mockData';
 
 export default function Withdrawals() {
   const [typeFilter, setTypeFilter] = useState('all');
+  const [statusFilter, setStatusFilter] = useState('all');
 
-  const filtered = withdrawalsData.filter(w => typeFilter === 'all' || w.type.toLowerCase() === typeFilter);
+  const filtered = withdrawalsData.filter(w => {
+    const matchesType = typeFilter === 'all' || w.type.toLowerCase() === typeFilter;
+    const matchesStatus = statusFilter === 'all' || w.status.toLowerCase() === statusFilter.toLowerCase();
+    
+    return matchesType && matchesStatus;
+  });
 
   return (
     <div className="page-content">
@@ -41,7 +47,15 @@ export default function Withdrawals() {
               <option value="deposit">Deposit Wallet</option>
               <option value="profit">Profit Wallet</option>
             </select>
-            <select><option>All Status</option><option>Completed</option><option>Pending</option><option>Failed</option></select>
+            
+            <select value={statusFilter} onChange={e => setStatusFilter(e.target.value)}>
+              <option value="all">All Status</option>
+              <option value="completed">Completed</option>
+              <option value="pending">Pending</option>
+              <option value="failed">Failed</option>
+              {/* NEW: Added Rejected option here */}
+              <option value="rejected">Rejected</option>
+            </select>
           </div>
         </div>
         <div className="table-wrapper">
